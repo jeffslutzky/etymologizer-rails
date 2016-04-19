@@ -13,18 +13,16 @@ module Adapters
     end
 
     def URL(word)
-      "#{URL}#{word}?key=#{APIkey}"
+      "#{self.base_URL}#{word}?key=#{self.API_key}"
     end
 
     def query(word)
-      result = connection.get(URL(word))
+      result = connection.get(self.URL(word))
     end
 
-private
-
-  def API_key
-    "272d9489-c102-4c30-b028-b67348a5b1f2"
-  end
+    def API_key
+      "272d9489-c102-4c30-b028-b67348a5b1f2"
+    end
 
 
   end
