@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/api/words', to: 'words#index'
+  get '/api/word', to: 'words#index'
 
   resources :words, except: [:new, :edit]
   namespace :api, defaults: {format: :json} do
