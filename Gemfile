@@ -9,7 +9,6 @@ gem 'httparty'
 
 gem 'spring', :group => :development
 
-gem 'active_model_serializers'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'pry-byebug'
 gem 'crack'
