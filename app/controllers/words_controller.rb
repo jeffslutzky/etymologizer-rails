@@ -2,16 +2,24 @@ class WordsController < ApplicationController
 
   def index
     client = Adapters::DictionaryApiConnection.new
-    @word = params["word"]
+    # word = params["word"]
 
-    # hide API key
-    
-    json = Crack::XML.parse(client.query(@word))
+    words = params["word"].split
+    json_object = []
 
-    # ety = json["entry_list"]["entry"][0] ? json["entry_list"]["entry"][0]["et"] : json["entry_list"]["entry"]["et"]
+    words.each do |word|
+      json_word = Crack::XML.parse(client.query(word))
+      json_object.push(json_word)
+    end
 
-    render json: json
+    # binding.pry
+
+    # json = Crack::XML.parse(client.query(word))
+
+    render json: json_object
 
   end
 
 end
+
+# hide API key
