@@ -21,5 +21,3 @@ class WordsController < ApplicationController
   end
 
 end
-
-# hide API key

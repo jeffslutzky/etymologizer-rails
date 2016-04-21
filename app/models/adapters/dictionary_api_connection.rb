@@ -12,12 +12,8 @@ module Adapters
       "http://www.dictionaryapi.com/api/v1/references/collegiate/xml"
     end
 
-    def API_key
-      "272d9489-c102-4c30-b028-b67348a5b1f2"
-    end
-
     def URL(word)
-      "#{self.base_URL}/#{word}?key=#{self.API_key}"
+      "#{self.base_URL}/#{word}?key=#{ENV['API_key']}"
     end
 
     def query(word)

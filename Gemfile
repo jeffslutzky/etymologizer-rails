@@ -4,14 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 
 gem 'rails-api'
-
 gem 'httparty'
-
-gem 'spring', :group => :development
-
 gem 'rack-cors', :require => 'rack/cors'
 gem 'pry-byebug'
 gem 'crack'
+gem 'figaro'
+
+gem 'spring', :group => :development
 
 group :development do
   gem 'sqlite3'
