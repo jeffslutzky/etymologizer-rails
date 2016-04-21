@@ -4,7 +4,7 @@ class WordsController < ApplicationController
     client = Adapters::DictionaryApiConnection.new
     # word = params["word"]
 
-    words = params["word"].split
+    words = params["words"].split
     json_object = []
 
     words.each do |word|
