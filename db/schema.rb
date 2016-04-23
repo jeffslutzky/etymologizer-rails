@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419191746) do
+ActiveRecord::Schema.define(version: 20160423164856) do
 
   create_table "words", force: :cascade do |t|
-    t.string   "etymology"
-    t.string   "serializer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
